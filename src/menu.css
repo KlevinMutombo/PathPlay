@@ -1,0 +1,76 @@
+/* src/menu.css */
+.menu {
+    background-color: #f9c4f2;
+    min-height: 100vh;
+    padding: 20px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .menu-title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-family: 'Press Start 2P', cursive;
+  }
+  
+  /* Wrapper for all sections */
+  .menu-content {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap; /* responsive fallback */
+  }
+  
+  .menu-section {
+    background: #add8e6;
+    padding: 20px;
+    width: 220px;
+    text-align: center;
+    border-radius: 8px;
+    font-family: 'Press Start 2P', cursive;
+  }
+  
+  button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'Press Start 2P', cursive;
+    transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+  }
+  
+  /* Highlight selected buttons */
+  button.selected {
+    filter: brightness(1.2);
+    transform: scale(1.05);
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.6);
+  }
+  
+  .easy {
+    background-color: #4caf50;
+  }
+  
+  .medium {
+    background-color: #ffeb3b;
+  }
+  
+  .hard {
+    background-color: #f44336;
+  }
+  
+  .theme-btn {
+    background-color: #f9d976;
+  }
+  
+  .play-btn {
+    background-color: #f9d976;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+  }
+  
