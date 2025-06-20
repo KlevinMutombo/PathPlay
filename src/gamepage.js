@@ -1,5 +1,5 @@
 // src/GamePage.js
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import './gamepage.css';
 
 function GamePage({ difficulty = 'easy', theme = 'numbers', onBack }) {
@@ -41,7 +41,7 @@ function GamePage({ difficulty = 'easy', theme = 'numbers', onBack }) {
   };
 
   // Démarre ou redémarre le niveau courant
-  const startLevel = () => {
+  const startLevel = useCallback(() => {
     // nombre de tuiles à révéler = min(level, maxTiles)
     const count = Math.min(level, maxTiles);
     const seq = generateSequence(count);
@@ -60,13 +60,12 @@ function GamePage({ difficulty = 'easy', theme = 'numbers', onBack }) {
       setRevealIndex(-1);
       setStep('play');
     }, delay * seq.length + 200);
-  };
+  }, [level, delay]); // ✅ encapsulé avec useCallback pour éviter l'erreur ESLint
 
   // useEffect pour lancer startLevel à chaque changement de niveau
   useEffect(() => {
     startLevel();
-    
-  }, [level]);
+  }, [startLevel]);
 
   // Gestion du clic sur une tuile (idx)
   const handleClick = (idx) => {
@@ -181,7 +180,3 @@ function GamePage({ difficulty = 'easy', theme = 'numbers', onBack }) {
 }
 
 export default GamePage;
-
-
-
-
