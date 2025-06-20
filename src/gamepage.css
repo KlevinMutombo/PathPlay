@@ -5,9 +5,27 @@
     font-family: 'Press Start 2P', cursive;
     min-height: 100vh;
   }
-  .theme-numbers { background: #f0f0f0; }
-  .theme-shapes  { background: #ffffff; }
-  .theme-animals { background: #d6f5d6; }
+
+  .theme-numbers { background: #f0f0f0;
+    background-image: url("nowem.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+   }
+
+  .theme-shapes  { background: #ffffff;
+    background-image: url("shapes.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+   }
+
+  .theme-animals { background: #d6f5d6;
+    background-image: url("animals.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+   }
   
   .game-header {
     display: flex;
