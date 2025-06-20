@@ -10,14 +10,14 @@ function App() {
   const [difficulty, setDifficulty] = useState('easy');
   const [theme, setTheme] = useState('nature');
 
-  // Launches the game with selected settings
+  // Commence le jeux avec parametres selectionnes 
   const handleStartGame = (selectedDifficulty, selectedTheme) => {
     setDifficulty(selectedDifficulty);
     setTheme(selectedTheme);
     setShowGame(true);
   };
 
-  // Returns to main menu
+  // Retourne au menu
   const handleBackToMenu = () => {
     setShowGame(false);
   };
